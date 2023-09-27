@@ -1,0 +1,20 @@
+
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.contact{
+    width: 100%;
+}
+.delete{
+    margin-left: 10px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 10%;
+    border-style: solid;
+}
+
+.delete :hover, :focus{
+    background-color: gray;
+}

@@ -1,0 +1,27 @@
+.form{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+gap: 20px;
+border: 2px;
+border-style: solid;
+}
+.label{
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+.add{
+    width: 100px;
+    cursor: pointer;
+  background-color: white;
+  border-style: solid;
+  margin: 10px;
+}
+.add :hover, :focus{
+    background-color: gray;
+}
