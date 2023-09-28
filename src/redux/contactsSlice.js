@@ -65,6 +65,7 @@ const initialState = {
   filter: '',
 };
 
+
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState,
