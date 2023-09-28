@@ -18,7 +18,7 @@ const Filter = () => {
       <input
         type="text"
         id="filter"
-        value={filter}
+        value={filter || ''}
         onChange={handleFilterChange}
       />
     </label>

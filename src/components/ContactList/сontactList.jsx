@@ -17,9 +17,12 @@ const ContactList = () => {
       contact.name.toLowerCase().includes(filter.toLowerCase())
   );
 
-
-  const handleDeleteContact = id => {
-    dispatch(deleteContact(id));
+  const handleDeleteContact = async id => {
+    try {
+      await dispatch(deleteContact(id));
+    } catch (error) {
+      console.error('Помилка при видаленні контакта:', error);
+    }
   };
 
   return (
