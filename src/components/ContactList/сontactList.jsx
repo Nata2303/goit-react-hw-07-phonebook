@@ -9,13 +9,12 @@ const ContactList = () => {
   const contacts = useSelector(selectContacts);
   const filter = useSelector(selectFilter);
 
-  const filteredContacts = contacts.filter(
-    contact =>
-      contact &&
-      contact.name &&
-      contact.number &&
-      contact.name.toLowerCase().includes(filter.toLowerCase())
-  );
+ const filteredContacts = contacts.filter(
+   contact =>
+     typeof contact.name === 'string' &&
+     typeof contact.number === 'string' &&
+     contact.name.toLowerCase().includes(filter.toLowerCase())
+ );
 
   const handleDeleteContact = async id => {
     try {
