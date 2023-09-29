@@ -9,12 +9,19 @@ const ContactList = () => {
   const contacts = useSelector(selectContacts);
   const filter = useSelector(selectFilter);
 
- const filteredContacts = contacts.filter(
-   contact =>
-     typeof contact.name === 'string' &&
-     typeof contact.number === 'string' &&
+ const filteredContacts = contacts.filter(contact => {
+   if (typeof filter !== 'string') {
+     // Обробка випадку, коли filter не є рядком
+     return false; // або інша логіка обробки
+   }
+
+   return (
+     contact &&
+     contact.name &&
+     contact.number &&
      contact.name.toLowerCase().includes(filter.toLowerCase())
- );
+   );
+ });
 
   const handleDeleteContact = async id => {
     try {
